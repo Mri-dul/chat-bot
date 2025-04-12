@@ -55,7 +55,7 @@ function App() {
           <div className="message bot-message">
             <Chatboticon />
             <p className="message-text">
-              hey there <br /> how can i help you today?
+              hey debu <br /> how can i help you today?
             </p>
           </div>
 
