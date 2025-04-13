@@ -3,12 +3,15 @@ import Chatboticon from './Chatboticon'
 
 function Chatmessage({chat}) {
   return (
+    !chat.hideInchat && (
     <div>
-      <div className={`message ${chat.role === "model" ? "bot" : "user" }-message`}>
+     
+      <div className={`message ${chat.role === "model" ? "bot" : "user" }-message `}>
         {chat.role==="model" && <Chatboticon/>}
           <p className="message-text">{chat.text } </p>
           </div>
     </div>
+    )
   )
 }
 

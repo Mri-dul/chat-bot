@@ -2,8 +2,13 @@ import React, { useState } from 'react'
 import Chatboticon from './Chatboticon'
 import ChtaForm from './ChtaForm'
 import ChatMessage from './Chatmessage'
+import myInfo from './myinfo.js'
 function App() {
-  const [charHistory , setChatHistory] =useState([]);
+  const [charHistory , setChatHistory] =useState([{
+    hideInchat:true,
+    role:"model",
+    text: JSON.stringify(myInfo)
+  }]);
   const generateBotResponse = async (history) => {
     const updateHistory = (text) => {
       setChatHistory(prev => [...prev.filter(msg=>msg.text !== "Thinking..."), {role: "model",text}])
